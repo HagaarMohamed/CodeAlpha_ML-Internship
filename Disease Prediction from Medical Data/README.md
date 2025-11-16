@@ -3,6 +3,8 @@
 This project was developed during my Machine Learning Internship at CodeAlpha. The Flask web app predicts the likelihood of heart disease based on medical data input by users. By utilizing machine learning techniques, the model provides an accurate prediction of heart disease risk.The accuracy of the model reaches 97% . And the project also features a user-friendly interface with clean, professional design elements.
 
 
+https://github.com/user-attachments/assets/bbf2d86b-6a94-4e31-b0ac-568b1348b6a7
+
 
 ## **🌟 Features**
 
