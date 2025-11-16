@@ -1,5 +1,16 @@
 # Heart Disease Prediction Flask Application
 
+## **💻 Technologies Used**
+
+- **Flask** for building the web app.
+- **Python** for backend development and machine learning integration.
+- **Machine Learning Libraries**:
+  - Scikit-learn
+  - Pandas
+  - Numpy
+- **HTML/CSS** for front-end design.
+
+
 # 🛠️ Setup & Installation
 
 Clone the repository:
@@ -18,11 +29,3 @@ Feel free to submit a pull request if you'd like to improve this project. Contri
 
 Enjoy predicting heart health with this easy-to-use web app! 😊
 
-💻 Technologies Used
-Flask for building the web app.
-Python for backend development and machine learning integration.
-Machine Learning Libraries:
-Scikit-learn
-Pandas
-Numpy
-HTML/CSS for front-end design.
