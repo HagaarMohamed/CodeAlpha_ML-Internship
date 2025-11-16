@@ -37,7 +37,7 @@ The goal of this project is to create a model that can accurately predict credit
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/yourusername/Credit-Score-Prediction.git
+   https://github.com/HagaarMohamed/CodeAlpha_ML-Internship/tree/main/Credit%20Scoring%20Model
    ```
 2. Navigate to the project directory:
    ```bash
