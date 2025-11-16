@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease Prediction Using Machine Learning</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                HEART DISEASE PREDICTION USING MACHINE LEARNING
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">HOME</a></li>
+                <li><a href="{{ url_for('predict') }}" class="nav-link">PREDICT</a></li>
+                <li><a href="#result" class="nav-link">RESULT</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-left">
+                <div class="heart-container">
+                    <!-- ECG Heart SVG -->
+                    <svg viewBox="0 0 400 300" class="heart-svg">
+                        <!-- Heart Shape -->
+                        <path
+                            d="M200,250 C200,250 50,150 50,100 C50,60 80,40 110,40 C140,40 170,60 200,90 C230,60 260,40 290,40 C320,40 350,60 350,100 C350,150 200,250 200,250 Z"
+                            fill="none" stroke="#8B8B8B" stroke-width="8" />
+
+                        <!-- ECG Line -->
+                        <polyline points="20,150 80,150 100,120 120,180 140,150 340,150" fill="none" stroke="#8B8B8B"
+                            stroke-width="6" class="ecg-line" />
+                    </svg>
+                </div>
+            </div>
+            <div class="hero-right">
+                <h1 class="hero-title">FIGHT<br>FOR EVERY<br>HEARTBEAT</h1>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="result-body">
+
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="logo">HEART DISEASE PREDICTION</div>
+        <ul class="nav-menu">
+            <li><a href="/" class="nav-link">HOME</a></li>
+            <li><a href="/predict" class="nav-link">PREDICT</a></li>
+        </ul>
+    </div>
+</nav>
+
+<section class="result-section">
+    <div class="result-card">
+        <h2 class="result-title">🩺 Your Heart Disease Prediction Results</h2>
+
+        <div class="result-content">
+            {% if prediction == 0 %}
+                <div class="result-success">
+                    <div class="result-icon">✅</div>
+                    <h3>Low Risk of Heart Disease</h3>
+                    <p class="result-text">
+                        🎉 Congratulations! Based on the provided data, your risk of heart disease appears to be <strong>low</strong>.
+                    </p>
+                    <div class="probability-box low-risk">
+                        <p>Heart Disease Risk: <strong>{{ probability|round(2) }}%</strong></p>
+                        <p>Healthy Probability: <strong>{{ risk_low|round(2) }}%</strong></p>
+                    </div>
+                    <p class="recommendation">
+                        💚 Keep maintaining a healthy lifestyle with regular exercise, balanced diet, and routine checkups.
+                    </p>
+                </div>
+            {% else %}
+                <div class="result-warning">
+                    <div class="result-icon">⚠️</div>
+                    <h3>High Risk of Heart Disease</h3>
+                    <p class="result-text">
+                        ⚠️ Warning! Based on the provided data, there might be an <strong>increased risk</strong> of heart disease.
+                    </p>
+                    <div class="probability-box high-risk">
+                        <p>Heart Disease Risk: <strong>{{ probability|round(2) }}%</strong></p>
+                        <p>Healthy Probability: <strong>{{ risk_low|round(2) }}%</strong></p>
+                    </div>
+                    <p class="recommendation">
+                        🏥 <strong>Important:</strong> Please consult a healthcare professional for a comprehensive evaluation and personalized advice.
+                    </p>
+                </div>
+            {% endif %}
+        </div>
+
+        <!-- Added margin-top for spacing -->
+        <div class="action-buttons" style="margin-top: 30px;">
+            <a href="/predict" class="predict-btn">🔄 Predict Again</a>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>

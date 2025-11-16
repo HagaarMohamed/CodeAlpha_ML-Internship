@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body class="predict-body">
+
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="logo">HEART DISEASE PREDICTION</div>
+        <ul class="nav-menu">
+            <li><a href="/" class="nav-link">HOME</a></li>
+            <li><a href="/predict" class="nav-link">PREDICT</a></li>
+        </ul>
+    </div>
+</nav>
+
+<section class="predict-section">
+    <div class="predict-card">
+        <h2 class="predict-title">Heart Disease Prediction</h2>
+        <p class="predict-subtitle">Fill the form below to analyze your heart condition</p>
+
+        {% if error %}
+        <div class="error-message">
+            <p>{{ error }}</p>
+        </div>
+        {% endif %}
+
+        <form action="/predict" method="POST" class="predict-form">
+
+            <!-- Sex -->
+            <div class="form-group">
+                <label>Sex</label>
+                <select name="Sex" required>
+                    <option value="" disabled selected>Select gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </div>
+
+            <!-- General Health -->
+            <div class="form-group">
+                <label>General Health</label>
+                <select name="GeneralHealth" required>
+                    <option value="" disabled selected>Select health level</option>
+                    <option value="Excellent">Excellent</option>
+                    <option value="Very good">Very good</option>
+                    <option value="Good">Good</option>
+                    <option value="Fair">Fair</option>
+                    <option value="Poor">Poor</option>
+                </select>
+            </div>
+
+            <!-- Physical Health Days -->
+            <div class="form-group">
+                <label>Physical Health Days (0–30)</label>
+                <input type="number" name="PhysicalHealthDays" min="0" max="30" required>
+            </div>
+
+            <!-- Mental Health Days -->
+            <div class="form-group">
+                <label>Mental Health Days (0–30)</label>
+                <input type="number" name="MentalHealthDays" min="0" max="30" required>
+            </div>
+
+            <!-- Sleep Hours -->
+            <div class="form-group">
+                <label>Sleep Hours (1–24)</label>
+                <input type="number" name="SleepHours" min="1" max="24" required>
+            </div>
+
+            <!-- Physical Activities -->
+            <div class="form-group">
+                <label>Physical Activities</label>
+                <select name="PhysicalActivities" required>
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+
+            <!-- Diabetes -->
+            <div class="form-group">
+                <label>Diabetes Status</label>
+                <select name="HadDiabetes" required>
+                    <option value="" disabled selected>Select diabetes type</option>
+                    <option value="No">No</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No, pre-diabetes or borderline diabetes">Pre-diabetes</option>
+                    <option value="Yes, but only during pregnancy (female)">Yes, during pregnancy (gestational diabetes)</option>
+                </select>
+            </div>
+
+            <!-- Smoker Status -->
+            <div class="form-group">
+                <label>Smoker Status</label>
+                <select name="SmokerStatus" required>
+                    <option value="" disabled selected>Select smoking status</option>
+                    <option value="Never smoked">Never smoked</option>
+                    <option value="Former smoker">Former smoker</option>
+                    <option value="Current smoker - now smokes every day">Current smoker - every day</option>
+                    <option value="Current smoker - now smokes some days">Current smoker - some days</option>
+                </select>
+            </div>
+
+            <!-- Age Category -->
+            <div class="form-group">
+                <label>Age Category</label>
+                <select name="AgeCategory" required>
+                    <option value="" disabled selected>Select your age range</option>
+                    <option value="Age 18 to 24">Age 18 to 24</option>
+                    <option value="Age 25 to 29">Age 25 to 29</option>
+                    <option value="Age 30 to 34">Age 30 to 34</option>
+                    <option value="Age 35 to 39">Age 35 to 39</option>
+                    <option value="Age 40 to 44">Age 40 to 44</option>
+                    <option value="Age 45 to 49">Age 45 to 49</option>
+                    <option value="Age 50 to 54">Age 50 to 54</option>
+                    <option value="Age 55 to 59">Age 55 to 59</option>
+                    <option value="Age 60 to 64">Age 60 to 64</option>
+                    <option value="Age 65 to 69">Age 65 to 69</option>
+                    <option value="Age 70 to 74">Age 70 to 74</option>
+                    <option value="Age 75 to 79">Age 75 to 79</option>
+                    <option value="Age 80 or older">Age 80 or older</option>
+                </select>
+            </div>
+
+            <!-- Height -->
+            <div class="form-group">
+                <label>Height (meters)</label>
+                <input type="number" step="0.01" name="HeightInMeters" min="1.0" max="2.5" required>
+            </div>
+
+            <!-- Weight -->
+            <div class="form-group">
+                <label>Weight (kg)</label>
+                <input type="number" step="0.1" name="WeightInKilograms" min="30" max="200" required>
+            </div>
+
+            <!-- BMI -->
+            <div class="form-group">
+                <label>BMI</label>
+                <input type="number" step="0.1" name="BMI" min="10" max="50" required>
+            </div>
+
+            <button type="submit" class="predict-btn">Predict Now</button>
+        </form>
+    </div>
+</section>
+
+</body>
+</html>
