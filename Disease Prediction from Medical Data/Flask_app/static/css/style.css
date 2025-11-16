@@ -1,0 +1,270 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #8B0000;
+    color: white;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #8B0000;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: white;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: opacity 0.3s;
+}
+
+.nav-link:hover {
+    opacity: 0.7;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #8B0000 0%, #6B0000 100%);
+    padding-top: 80px;
+}
+
+.hero-content {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    gap: 100px;
+}
+
+.hero-left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-right {
+    flex: 1;
+}
+
+/* Heart Container */
+.heart-container {
+    width: 400px;
+    height: 300px;
+}
+
+.heart-svg {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.1));
+}
+
+/* ECG Animation */
+.ecg-line {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: draw 2s ease-in-out infinite;
+}
+
+@keyframes draw {
+    0% {
+        stroke-dashoffset: 1000;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* Hero Title */
+.hero-title {
+    font-size: 90px;
+    font-weight: 900;
+    line-height: 1;
+    color: rgba(255, 255, 255, 0.3);
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .hero-content {
+        flex-direction: column;
+        gap: 50px;
+        text-align: center;
+    }
+    
+    .hero-title {
+        font-size: 60px;
+    }
+    
+    .heart-container {
+        width: 300px;
+        height: 225px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .logo {
+        font-size: 14px;
+    }
+    
+    .nav-menu {
+        gap: 20px;
+    }
+    
+    .hero-title {
+        font-size: 50px;
+    }
+}
+
+/* Predict Page Styles */
+.predict-body {
+    background: linear-gradient(135deg, #8B0000 0%, #6B0000 100%);
+    color: white;
+}
+
+.predict-section {
+    padding-top: 120px;
+    display: flex;
+    justify-content: center;
+}
+
+.predict-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    width: 60%;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 30px rgba(0,0,0,0.3);
+}
+
+.predict-title {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 10px;
+    font-weight: 800;
+}
+
+.predict-subtitle {
+    text-align: center;
+    font-size: 14px;
+    opacity: 0.8;
+    margin-bottom: 30px;
+}
+
+.predict-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.form-group label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background: rgba(255,255,255,0.8);
+}
+
+/* Predict Button */
+.predict-btn {
+    grid-column: span 2;
+    padding: 15px;
+    background: white;
+    color: #8B0000;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.predict-btn:hover {
+    opacity: 0.8;
+}
+
+/* Result Page */
+.result-body {
+    background: linear-gradient(135deg, #8B0000 0%, #6B0000 100%);
+    color: white;
+}
+
+.result-section {
+    padding-top: 120px;
+    display: flex;
+    justify-content: center;
+}
+
+.result-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    width: 50%;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 30px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+.result-title {
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.result-text {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
