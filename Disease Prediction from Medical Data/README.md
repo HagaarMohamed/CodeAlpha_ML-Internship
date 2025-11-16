@@ -4,7 +4,7 @@
 
 Clone the repository:
 
-git clone 
+git clone https://github.com/HagaarMohamed/CodeAlpha_ML-Internship/tree/main/Disease%20Prediction%20from%20Medical%20Data
 Install required dependencies:
 
 pip install -r requirements.txt
