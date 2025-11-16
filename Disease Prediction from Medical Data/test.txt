@@ -1,0 +1,14 @@
+test = {
+    'PhysicalHealthDays': 25,
+    'MentalHealthDays': 20,
+    'SleepHours': 4,
+    'HeightInMeters': 1.70,
+    'WeightInKilograms': 95,
+    'BMI': 32.8,
+    'Sex': 'Male',
+    'GeneralHealth': 'Poor',
+    'PhysicalActivities': 'No',
+    'HadDiabetes': 'Yes',
+    'SmokerStatus': 'Current smoker - now smokes every day',
+    'AgeCategory': 'Age 65 to 69'
+}
