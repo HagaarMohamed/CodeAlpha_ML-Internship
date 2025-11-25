@@ -3,18 +3,11 @@
 ## **Overview**
 This project aims to recognize emotions from speech using a Long Short Term Memory (LSTM) model. It was developed during my internship as a Machine Learning Engineer at CodeAlpha.
 
-## **Demo**
-Check out the demo video showcasing the web app's capabilities in recognizing emotions from audio files!
-
-
-
-
 
 
 ## **Features**
 - Predicts emotions such as **Fear**, **Sadness**,**Happiness**, and more from speech audio.
-- User-friendly web interface for easy interaction.
-- Built using advanced machine learning techniques for accurate predictions.
+- Built using advanced machine and deep learning techniques for accurate predictions.
 
 ## **Project Lifecycle**
 1. **Data Collection** 📊
@@ -65,12 +58,6 @@ To run this project locally, follow these steps:
    ```bash
    pip install -r requirements.txt
    ```
-
-3. Run the web app:
-   ```bash
-   python app.py
-   ```
-
 
 
 ## **Acknowledgments**
